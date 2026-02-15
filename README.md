@@ -34,76 +34,76 @@ Manual scheduling often leads to:
 - Human errors  
 - Time-consuming adjustments  
 
-This system automates and optimizes the entire process.
+This system automates the entire process using AI-based decision-making.
 
----
+AI Models Implemented
+Constraint Satisfaction Problem (CSP)
 
-## 🧠 Core Features
+Optimization-Based Scheduling
 
-### ✅ Hard Constraint Handling
-- No teacher clashes  
-- No batch clashes  
-- Lab courses assigned only to lab rooms  
-- Teacher daily workload limit enforcement  
-- Room availability validation  
+Hybrid AI Agent (CSP + Optimization)
 
-### ⚙ Optimization Engine
-- Day distribution balancing  
-- Teacher load fairness  
-- Room utilization balancing  
-- Hybrid CSP + Optimization approach  
+Soft Constraint Scoring System
 
-### 📊 Advanced AI Evaluation Metrics
-- Room Utilization Percentage  
-- Teacher Fairness Score  
-- Day Balance Score  
-- Global Efficiency Score  
+Key Features
+Multi-batch scheduling
 
-### 🔍 Coverage Validation
-- Required vs Scheduled hours check  
-- Missing course detection  
+Lab & project room constraints
 
-### ⚠ Feasibility Analysis
-- Weekly capacity validation  
-- Lab capacity validation  
-- Teacher workload feasibility check  
-- Batch weekly load feasibility  
----
-│
-├── static/
-├── requirements.txt
-└── README.md
-```
+Teacher unavailability handling
 
----
+Daily workload balancing
 
-## 🛠 Technologies Used
+Room utilization optimization
 
-- Python  
-- Flask  
-- Pandas  
-- Chart.js  
-- Bootstrap 5  
-- ReportLab (PDF Export)  
+Teacher fairness scoring
 
----
+Day balance scoring
 
-## 📈 AI Evaluation Metrics
+Global efficiency scoring
 
-| Metric | Description |
-|--------|------------|
-| Room Utilization | Percentage of total room usage |
-| Teacher Fairness | Workload distribution score |
-| Day Balance | Slot distribution stability |
-| Global Efficiency | Weighted overall performance score |
+Coverage validation system
 
----
+Excel export
 
-## 📥 How to Run Locally
+PDF export
 
-```bash
-git clone https://github.com/yourusername/Intelligent-Academic-Timetable-Scheduling-System.git
-cd Intelligent-Academic-Timetable-Scheduling-System
+Multi-page professional dashboard UI
+
+Advanced Evaluation Metrics
+Total Sessions Scheduled
+
+Execution Time
+
+Room Utilization Percentage
+
+Teacher Fairness Score
+
+Day Balance Score
+
+Global Efficiency Score
+
+Course Coverage Validation
+
+System Architecture
+Data Input Layer (CSV Upload)
+
+AI Scheduling Engine
+
+Constraint Validation Layer
+
+Optimization Layer
+
+Evaluation Layer
+
+Visualization Dashboard
+
+Export Module (Excel & PDF)
+
+How to Run Locally
+1️⃣ Install dependencies
+css
+Copy code
 pip install -r requirements.txt
 python app.py
 ```
@@ -112,31 +112,33 @@ Open:
 
 ```
 http://127.0.0.1:5000
-```
+Technologies Used
+Python
 
----
+Flask
 
-## 🌍 Future Enhancements
+Pandas
 
-- Admin panel for manual data entry  
-- Database integration  
-- Role-based authentication  
-- Cloud deployment  
-- Multi-institution support  
-- AI-based auto-weight tuning  
+Chart.js
 
----
+ReportLab
 
-## 👨‍💻 Developed By
+Bootstrap
 
-Harsha  
-B.Tech AI Academic Project  
-AI-Based Deliberative Planning Agent System  
+Future Enhancements
+Genetic Algorithm-based optimization
 
----
+Integer Linear Programming integration
 
-## 📜 License
+Real-time conflict detection
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+Admin manual entry panel
 
-© 2026 Harsha Vardhan Ghadge
+Cloud deployment
+
+Database integration (PostgreSQL/MySQL)
+
+Role-based authentication system
+
+Academic Purpose
+This project was developed as a B.Tech AI Agent Academic Project focusing on real-world intelligent scheduling systems.
