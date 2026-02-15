@@ -1,0 +1,11 @@
+room,capacity,type
+R101,70,classroom
+R102,65,classroom
+R103,60,classroom
+R104,55,classroom
+R105,50,classroom
+R201,45,classroom
+R202,40,classroom
+Lab1,35,lab
+Lab2,35,lab
+Lab3,30,lab
