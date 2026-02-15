@@ -1,38 +1,35 @@
-# 🎓 Intelligent Academic Timetable Scheduling System
+Intelligent Academic Timetable Scheduling System
+Overview
+The Intelligent Academic Timetable Scheduling System is an AI-driven deliberative planning agent designed to automatically generate optimized, conflict-free academic timetables for universities and educational institutions.
 
-## 🚀 Overview
+The system uses Constraint Satisfaction, Optimization techniques, and Hybrid AI planning strategies to handle complex academic scheduling constraints efficiently.
 
-The **Intelligent Academic Timetable Scheduling System** is an AI-driven deliberative planning agent designed to automatically generate optimized, conflict-free academic timetables for universities and educational institutions.
-
-The system integrates:
-
-- Constraint Satisfaction (CSP)
-- Optimization Techniques
-- Hybrid AI Planning Strategies
-
-to handle complex academic scheduling constraints efficiently.
-
----
-
-## 🎯 Problem Statement
-
+Problem Statement
 Academic timetable generation involves multiple interdependent constraints:
 
-- Teacher availability  
-- Classroom capacity  
-- Laboratory requirements  
-- Batch overlaps  
-- Faculty workload limits  
-- Time slot balancing  
-- Resource utilization  
+Teacher availability
 
-Manual scheduling often leads to:
+Classroom capacity
 
-- Conflicts  
-- Inefficient resource usage  
-- Imbalanced workload  
-- Human errors  
-- Time-consuming adjustments  
+Laboratory requirements
+
+Batch overlaps
+
+Faculty workload limits
+
+Time slot balancing
+
+Resource utilization
+
+Manual scheduling leads to:
+
+Conflicts
+
+Inefficient resource allocation
+
+Uneven distribution
+
+Last-minute adjustments
 
 This system automates the entire process using AI-based decision-making.
 
@@ -105,12 +102,13 @@ How to Run Locally
 css
 Copy code
 pip install -r requirements.txt
+2️⃣ Run the application
+nginx
+Copy code
 python app.py
-```
-
-Open:
-
-```
+3️⃣ Open browser
+cpp
+Copy code
 http://127.0.0.1:5000
 Technologies Used
 Python
