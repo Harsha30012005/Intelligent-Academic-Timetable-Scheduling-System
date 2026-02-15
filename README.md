@@ -1,142 +1,174 @@
-Intelligent Academic Timetable Scheduling System
-Overview
-The Intelligent Academic Timetable Scheduling System is an AI-driven deliberative planning agent designed to automatically generate optimized, conflict-free academic timetables for universities and educational institutions.
+# 🎓 Intelligent Academic Timetable Scheduling System
 
-The system uses Constraint Satisfaction, Optimization techniques, and Hybrid AI planning strategies to handle complex academic scheduling constraints efficiently.
+## 🚀 Overview
 
-Problem Statement
+The **Intelligent Academic Timetable Scheduling System** is an AI-driven deliberative planning agent designed to automatically generate optimized, conflict-free academic timetables for universities and educational institutions.
+
+The system integrates:
+
+- Constraint Satisfaction (CSP)
+- Optimization Techniques
+- Hybrid AI Planning Strategies
+
+to handle complex academic scheduling constraints efficiently.
+
+---
+
+## 🎯 Problem Statement
+
 Academic timetable generation involves multiple interdependent constraints:
 
-Teacher availability
+- Teacher availability  
+- Classroom capacity  
+- Laboratory requirements  
+- Batch overlaps  
+- Faculty workload limits  
+- Time slot balancing  
+- Resource utilization  
 
-Classroom capacity
+Manual scheduling often leads to:
 
-Laboratory requirements
+- Conflicts  
+- Inefficient resource usage  
+- Imbalanced workload  
+- Human errors  
+- Time-consuming adjustments  
 
-Batch overlaps
+This system automates and optimizes the entire process.
 
-Faculty workload limits
+---
 
-Time slot balancing
+## 🧠 Core Features
 
-Resource utilization
+### ✅ Hard Constraint Handling
+- No teacher clashes  
+- No batch clashes  
+- Lab courses assigned only to lab rooms  
+- Teacher daily workload limit enforcement  
+- Room availability validation  
 
-Manual scheduling leads to:
+### ⚙ Optimization Engine
+- Day distribution balancing  
+- Teacher load fairness  
+- Room utilization balancing  
+- Hybrid CSP + Optimization approach  
 
-Conflicts
+### 📊 Advanced AI Evaluation Metrics
+- Room Utilization Percentage  
+- Teacher Fairness Score  
+- Day Balance Score  
+- Global Efficiency Score  
 
-Inefficient resource allocation
+### 🔍 Coverage Validation
+- Required vs Scheduled hours check  
+- Missing course detection  
 
-Uneven distribution
+### ⚠ Feasibility Analysis
+- Weekly capacity validation  
+- Lab capacity validation  
+- Teacher workload feasibility check  
+- Batch weekly load feasibility  
 
-Last-minute adjustments
+---
 
-This system automates the entire process using AI-based decision-making.
+## 🖥 System Architecture
 
-AI Models Implemented
-Constraint Satisfaction Problem (CSP)
+```
+Flask Web App
+      ↓
+Scheduling Engine (CSP + Optimizer + Hybrid)
+      ↓
+Evaluation & Validation Module
+      ↓
+Visualization Dashboard (Charts + Metrics)
+```
 
-Optimization-Based Scheduling
+---
 
-Hybrid AI Agent (CSP + Optimization)
+## 📂 Project Structure
 
-Soft Constraint Scoring System
+```
+Intelligent_Timetable_Agent/
+│
+├── app.py
+├── engine.py
+├── templates/
+│   ├── landing.html
+│   ├── dashboard.html
+│   ├── analytics.html
+│   ├── coverage.html
+│
+├── static/
+├── requirements.txt
+└── README.md
+```
 
-Key Features
-Multi-batch scheduling
+---
 
-Lab & project room constraints
+## 🛠 Technologies Used
 
-Teacher unavailability handling
+- Python  
+- Flask  
+- Pandas  
+- Chart.js  
+- Bootstrap 5  
+- ReportLab (PDF Export)  
 
-Daily workload balancing
+---
 
-Room utilization optimization
+## 📈 AI Evaluation Metrics
 
-Teacher fairness scoring
+| Metric | Description |
+|--------|------------|
+| Room Utilization | Percentage of total room usage |
+| Teacher Fairness | Workload distribution score |
+| Day Balance | Slot distribution stability |
+| Global Efficiency | Weighted overall performance score |
 
-Day balance scoring
+---
 
-Global efficiency scoring
+## 📥 How to Run Locally
 
-Coverage validation system
-
-Excel export
-
-PDF export
-
-Multi-page professional dashboard UI
-
-Advanced Evaluation Metrics
-Total Sessions Scheduled
-
-Execution Time
-
-Room Utilization Percentage
-
-Teacher Fairness Score
-
-Day Balance Score
-
-Global Efficiency Score
-
-Course Coverage Validation
-
-System Architecture
-Data Input Layer (CSV Upload)
-
-AI Scheduling Engine
-
-Constraint Validation Layer
-
-Optimization Layer
-
-Evaluation Layer
-
-Visualization Dashboard
-
-Export Module (Excel & PDF)
-
-How to Run Locally
-1️⃣ Install dependencies
-css
-Copy code
+```bash
+git clone https://github.com/yourusername/Intelligent-Academic-Timetable-Scheduling-System.git
+cd Intelligent-Academic-Timetable-Scheduling-System
 pip install -r requirements.txt
-2️⃣ Run the application
-nginx
-Copy code
 python app.py
-3️⃣ Open browser
-cpp
-Copy code
+```
+
+Open:
+
+```
 http://127.0.0.1:5000
-Technologies Used
-Python
+```
 
-Flask
+---
 
-Pandas
+## 🌍 Future Enhancements
 
-Chart.js
+- Admin panel for manual data entry  
+- Database integration  
+- Role-based authentication  
+- Cloud deployment  
+- Multi-institution support  
+- AI-based auto-weight tuning  
 
-ReportLab
+---
 
-Bootstrap
+## 👨‍💻 Developed By
 
-Future Enhancements
-Genetic Algorithm-based optimization
+Harsha  
+B.Tech AI Academic Project  
+AI-Based Deliberative Planning Agent System  
 
-Integer Linear Programming integration
+---
 
-Real-time conflict detection
+## 📜 License
 
-Admin manual entry panel
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
-Cloud deployment
+© 2026 Harsha Vardhan Ghadge
 
-Database integration (PostgreSQL/MySQL)
+---
 
-Role-based authentication system
-
-Academic Purpose
-This project was developed as a B.Tech AI Agent Academic Project focusing on real-world intelligent scheduling systems.
+⭐ If you find this project useful, consider giving it a star!
