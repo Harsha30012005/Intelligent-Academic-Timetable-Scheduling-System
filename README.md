@@ -163,4 +163,13 @@ AI-Based Deliberative Planning Agent System
 
 ---
 
+## 📜 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+© 2026 Harsha Vardhan Ghadge
+
+---
+
+
 ⭐ If you find this project useful, consider giving it a star!
