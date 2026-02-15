@@ -81,16 +81,31 @@
 
 <hr>
 
-<h5>Optimization Weights</h5>
+<h5 class="mb-3">Optimization Weights</h5>
 
-<label>Day Distribution Weight</label>
-<input type="number" name="day_balance" value="2" class="form-control mb-2">
+<div class="row">
 
-<label>Teacher Balance Weight</label>
-<input type="number" name="teacher_balance" value="2" class="form-control mb-2">
+    <div class="col-md-4">
+        <label class="form-label">Day Distribution</label>
+        <input type="number" name="day_balance" value="2"
+               class="form-control">
+    </div>
 
-<label>Room Utilization Balance Weight</label>
-<input type="number" name="room_balance" value="2" class="form-control mb-3">
+    <div class="col-md-4">
+        <label class="form-label">Teacher Balance</label>
+        <input type="number" name="teacher_balance" value="2"
+               class="form-control">
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Room Utilization</label>
+        <input type="number" name="room_balance" value="2"
+               class="form-control">
+    </div>
+
+</div>
+
+<br>
 
 <div class="text-center">
 <button class="btn btn-primary btn-lg">Generate Timetable</button>

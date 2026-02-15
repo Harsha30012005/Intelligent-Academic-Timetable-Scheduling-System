@@ -6,6 +6,12 @@ from reportlab.lib.pagesizes import A4
 
 from engine import generate_timetable
 
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import inch
+
 app = Flask(__name__)
 
 latest_timetable = None
@@ -199,8 +205,17 @@ def download_excel():
 # PDF DOWNLOAD
 # ----------------------------
 
+# from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
+# from reportlab.lib import colors
+# from reportlab.lib.styles import getSampleStyleSheet
+# from reportlab.lib.pagesizes import A4
+# from reportlab.lib.units import inch
+
+
 @app.route("/download_pdf")
 def download_pdf():
+
+    global latest_timetable
 
     if latest_timetable is None:
         return "Generate timetable first."
@@ -208,29 +223,65 @@ def download_pdf():
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=A4)
 
-    header = ["Day"] + [f"Slot{i}" for i in range(1, SLOTS_PER_DAY + 1)]
-    table_data = [header]
+    elements = []
+
+    styles = getSampleStyleSheet()
+
+    # -------------------------
+    # Title
+    # -------------------------
+    title = Paragraph("<b>Intelligent Academic Timetable</b>", styles["Title"])
+    elements.append(title)
+    elements.append(Spacer(1, 0.3 * inch))
+
+    # -------------------------
+    # Table Header
+    # -------------------------
+    table_data = [["Day", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5"]]
 
     for day, slots in latest_timetable.items():
+
         row = [day]
 
-        for slot in range(1, SLOTS_PER_DAY + 1):
+        for slot in range(1, 6):
             cell = []
             for room, course in slots[slot].items():
                 if course:
-                    cell.append(f"{room}:{course['code']}")
+                    cell.append(f"{room}: {course['code']} ({course['batch']})")
 
             row.append("\n".join(cell))
 
         table_data.append(row)
 
-    table = Table(table_data)
-    doc.build([table])
+    table = Table(table_data, repeatRows=1)
+
+    # -------------------------
+    # Styling
+    # -------------------------
+    table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.darkblue),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+
+        ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 0), (-1, -1), 8),
+
+        ('ROWHEIGHT', (0, 1), (-1, -1), 40)
+    ]))
+
+    elements.append(table)
+
+    doc.build(elements)
+
     buffer.seek(0)
 
     return send_file(
         buffer,
-        download_name="timetable.pdf",
+        download_name="Intelligent_Timetable.pdf",
         as_attachment=True
     )
 
