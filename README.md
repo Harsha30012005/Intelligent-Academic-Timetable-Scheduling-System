@@ -71,17 +71,38 @@ This system automates and optimizes the entire process.
 
 ---
 
-## 🖥 System Architecture
+## 🏗️ System Architecture
 
-```
-Flask Web App
-      ↓
-Scheduling Engine (CSP + Optimizer + Hybrid)
-      ↓
-Evaluation & Validation Module
-      ↓
-Visualization Dashboard (Charts + Metrics)
-```
+![System Architecture](architecture.png)
+
+### Architecture Overview
+
+1. **User Interface (Flask Web App)**
+   - Accepts CSV input
+   - Allows optimization weight tuning
+   - Displays analytics & coverage
+
+2. **Constraint Satisfaction Engine**
+   - Ensures hard constraints
+   - Teacher clash prevention
+   - Batch overlap prevention
+   - Lab room validation
+
+3. **Hybrid Optimization Layer**
+   - Balances day load
+   - Ensures teacher fairness
+   - Improves room utilization
+
+4. **Evaluation Module**
+   - Room Utilization %
+   - Teacher Fairness Score
+   - Day Balance Score
+   - Global Efficiency Score
+
+5. **Export Module**
+   - Structured PDF generation
+   - Excel export
+
 
 ---
 
