@@ -4,6 +4,14 @@
 
 The **Intelligent Academic Timetable Scheduling System** is an AI-driven deliberative planning agent designed to automatically generate optimized, conflict-free academic timetables for universities and educational institutions.
 
+🌐 **Live Demo:**  
+👉 https://intelligent-timetable.onrender.com  
+
+📂 **GitHub Repository:**  
+👉 https://github.com/Harsha30012005/Intelligent-Academic-Timetable-Scheduling-System  
+
+---
+
 The system integrates:
 
 - Constraint Satisfaction (CSP)
@@ -13,61 +21,90 @@ The system integrates:
 to handle complex academic scheduling constraints efficiently.
 
 ---
+## 🚀 Project Overview
 
-## 🎯 Problem Statement
+Academic timetable scheduling is a complex combinatorial optimization problem involving multiple interdependent constraints such as:
 
-Academic timetable generation involves multiple interdependent constraints:
-
-- Teacher availability  
+- Faculty availability  
 - Classroom capacity  
 - Laboratory requirements  
 - Batch overlaps  
 - Faculty workload limits  
 - Time slot balancing  
-- Resource utilization  
+- Resource utilization efficiency  
 
 Manual scheduling often leads to:
-
 - Conflicts  
-- Inefficient resource usage  
-- Imbalanced workload  
-- Human errors  
-- Time-consuming adjustments  
+- Underutilized resources  
+- Overloaded faculty  
+- Imbalanced schedules  
 
-This system automates and optimizes the entire process.
+This system solves the problem using a **Hybrid AI approach** combining:
+
+- Constraint Satisfaction (CSP)
+- Optimization-based heuristics
+- Multi-objective scoring
 
 ---
 
-## 🧠 Core Features
+## 🧠 AI Architecture
 
-### ✅ Hard Constraint Handling
-- No teacher clashes  
-- No batch clashes  
-- Lab courses assigned only to lab rooms  
-- Teacher daily workload limit enforcement  
-- Room availability validation  
+### 🔹 Hard Constraints
+- No teacher conflicts
+- No batch overlaps
+- Room type validation (Lab/Theory)
+- Teacher daily workload limit
+- Consecutive slots for labs/projects
+- Teacher unavailability enforcement
 
-### ⚙ Optimization Engine
-- Day distribution balancing  
-- Teacher load fairness  
-- Room utilization balancing  
-- Hybrid CSP + Optimization approach  
+### 🔹 Soft Constraints (Optimized via Scoring)
+- Day distribution balance
+- Teacher workload fairness
+- Room utilization balance
 
-### 📊 Advanced AI Evaluation Metrics
-- Room Utilization Percentage  
-- Teacher Fairness Score  
-- Day Balance Score  
-- Global Efficiency Score  
+---
 
-### 🔍 Coverage Validation
-- Required vs Scheduled hours check  
-- Missing course detection  
+## 🧠 AI Architecture
 
-### ⚠ Feasibility Analysis
-- Weekly capacity validation  
-- Lab capacity validation  
-- Teacher workload feasibility check  
-- Batch weekly load feasibility  
+### 🔹 Hard Constraints
+- No teacher conflicts
+- No batch overlaps
+- Room type validation (Lab/Theory)
+- Teacher daily workload limit
+- Consecutive slots for labs/projects
+- Teacher unavailability enforcement
+
+### 🔹 Soft Constraints (Optimized via Scoring)
+- Day distribution balance
+- Teacher workload fairness
+- Room utilization balance
+
+---
+
+## 📊 Advanced AI Evaluation Metrics
+
+The system computes intelligent evaluation metrics:
+
+- 📈 Room Utilization %
+- ⚖ Teacher Fairness Score
+- 📅 Day Balance Score
+- 🌍 Global Efficiency Score
+- 📋 Course Coverage Validation
+- ⚠ Feasibility Analysis
+
+---
+
+## 🖥 Features
+
+✔ Multi-page Professional Dashboard  
+✔ Landing Page + Scheduling Dashboard  
+✔ Analytics Page  
+✔ Coverage Validation Page  
+✔ CSV Upload System  
+✔ Dynamic Optimization Weights  
+✔ PDF Export (Structured Format)  
+✔ Excel Export  
+✔ Live Deployment on Render  
 
 ---
 
@@ -128,12 +165,14 @@ Intelligent_Timetable_Agent/
 
 ## 🛠 Technologies Used
 
-- Python  
-- Flask  
-- Pandas  
-- Chart.js  
-- Bootstrap 5  
-- ReportLab (PDF Export)  
+- Python 3.11
+- Flask
+- Pandas
+- Chart.js
+- Bootstrap 5
+- ReportLab (PDF generation)
+- Gunicorn (Production server)
+- Render (Cloud Deployment)
 
 ---
 
